@@ -2,7 +2,7 @@
 Covering topics from understanding cryptography book
 
 - [ ] Ch8: Public key cryptography based on Discrete Logarithm Problem
-  - [ ] Summary
+  - [X] Summary
 - [ ] Ch9: Elliptic Curve Cryptosystems
 - [ ] Ch10: Digital Signature
 - [ ] Math
