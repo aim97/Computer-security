@@ -6,5 +6,5 @@ Covering topics from understanding cryptography book
 - [ ] Ch9: Elliptic Curve Cryptosystems
 - [ ] Ch10: Digital Signature
 - [ ] Math
-  - [ ] Groups
+  - [X] Groups
   - [ ] Finding Inverse with Extended Euclidean Algorithm
