@@ -7,6 +7,7 @@ Covering topics from understanding cryptography book
 - [ ] Ch10: Digital Signature
 - [ ] Math
   - [ ] [Summary](Math/readme.md)
+    - [X] finding inverse with extended euclidean algorithm 
     - [X] Group Theory
   - [X] [Group Theory](./Math/group-theory.md)
   - [ ] Finding Inverse with Extended Euclidean Algorithm
