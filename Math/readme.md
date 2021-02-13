@@ -1,7 +1,21 @@
 # Math for cryptography
 This file includes a summary for the rules needed through out the book, without the explanation or proof of them, it includes the rules, what they imply, and how to use them.
 
-## Group Theory 
+## Finding inverse using extended euclidean algorithm 
+Problem statement: find the inverse of a given number *n*, in modulus *m*, given that n and m are coprimes. 
+
+Input: the number to find the inverse of n, and the mod m.  
+Solution steps:
+Let's define m as r<sub>0</sub>, and n as r<sub>1</sub>, and i := 2.
+1. Compute q<sub>i</sub> = floor(r<sub>i-2</sub>,r<sub>i-1</sub>).
+2. Compute t<sub>i</sub> = t<sub>i-2</sub> - q<sub>i</sub> t<sub>i-1</sub>.
+3. Compute r<sub>i</sub> = r<sub>i-2</sub> - q<sub>i</sub> r<sub>i-1</sub>.
+4. `If` r<sub>i</sub> = 1, `then` **t<sub>i</sub> is the inverse of n.**
+`Otherwise` jump to step 1, with i := i + 1.
+
+If it didn't reach 1, then n and m aren't co-primes. 
+
+## Group Theory
 - A group is defined by a set of _elements_ and and operation _&omicron;_ that satisfy the following rules:
 - **The group is closed**: for any two elements _x_ and _y_, _c = x &omicron; y &isin; G_
 - **Neutral element**: there must be Neutral Element _N &isin; G_ such that _x &omicron; N = x_
