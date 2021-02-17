@@ -66,3 +66,27 @@ All groups used in cryptography (at least here) are `abelian`, `finite`, `cyclic
 - Elliptic Curves: additive group, but the addition is "not simple", and the elements are points on the elliptic curve under some modular m.
 - GF(2<sup>m</sup>): used for AES, but DLP has multiple strong attacks in this groups, so it's not used.
 - Hyper-elliptic Curves: they are a generalization over elliptic curves that have shorter operand lengths, rarely used in practive currently.
+
+## Elliptic Curves Groups
+- A special type of Groups that has strong cryptographic properities.
+![elliptic curve definition](../images/Ch9-EllipticCurve-definition.png)
+- As shown in the above pic, elements of the group are points on the chosen curve.
+- operation of the group is called "addition" but it's definied in a special way  
+  let *p = (x<sub>1</sub>, y<sub>1</sub>), Q = (x<sub>2</sub>, y<sub>2</sub>)*  
+  we can compute *R = P + Q = (x<sub>3</sub>, y<sub>3</sub>)* as follows
+<p align='center'>
+<img alt='elliptic curve addition rules' src='../images/Ch9-EllipticCurve-addition.png' /><br />
+<img alt='elliptic curve point addition visualization' src='../images/Ch9-EllipticCurve-additionGraph.png' />
+</p>
+
+- The point *&bcy;* is an imaginary point at infinity that acts as a neutral element for the group.
+
+### Primitive element
+- let *&prop;* be a primitive element of elliptic curve group *G*, then *|G| * &prop; = &bcy;*, since we denote the operation in this group by `+` sign, we can denote the repeated application of this operation as `*` multiplication (analogous to power operation in multiplicative groups).
+- The operation *k * &prop;* is often computed in cryptography, in order to compute it efficiently we use **double and add algorithm** (same as power and multiply algorithm except changing `*` to `+`).
+
+- An important side note *Hasse’s theorem*:
+  ![elliptic curve limits](../images/Ch9-EllipticCurve-limits.png) 
+### DLP in Elliptic curves
+![ECDLP](../images/Ch9-EllipticCurve-DLP.png)
+Computing the multiplier *d* is the DLP in the domain of Elliptic curves.
