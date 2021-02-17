@@ -4,9 +4,9 @@
 - Chapter 9 of understand cryptography discusses one algorithm based on this, which is simply re-implementing DHKE using Elliptic Curve groups. 
 
 ## DHKE with Elliptic Curves 
-- First step is the setup phase.
+- First step is the setup phase.  
   ![setup phase](../images/Ch9-EllipticCurve-DHKE-setup.png)
-- Key exchange step 
+- Key exchange step  
   ![key exchange phase](../images/Ch9-EllipticCurve-DHKE.png)
 
 ## Attacks 

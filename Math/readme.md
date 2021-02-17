@@ -88,5 +88,5 @@ All groups used in cryptography (at least here) are `abelian`, `finite`, `cyclic
 - An important side note *Hasse’s theorem*:
   ![elliptic curve limits](../images/Ch9-EllipticCurve-limits.png) 
 ### DLP in Elliptic curves
-![ECDLP](../images/Ch9-EllipticCurve-DLP.png)
+![ECDLP](../images/Ch9-EllipticCurve-DLP.png)  
 Computing the multiplier *d* is the DLP in the domain of Elliptic curves.
