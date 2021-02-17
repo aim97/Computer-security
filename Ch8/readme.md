@@ -36,10 +36,10 @@ Attack the generalized DLP not specific to certain groups
 Let m = &radic;(*\|G\|*).  
 we can define x as x = x<sub>g</sub> m + x<sub>b</sub>  
 now the DLP can be written as  
-_&prop;<sup>x<sub>b<sub></sup> &equiv; &beta; &prop;<sup>-m x<sub>g<sub></sup>_  
+_&prop;<sup>x<sub>b</sub></sup> &equiv; &beta; &prop;<sup>-m x<sub>g</sub></sup>_  
 
 1. Generate all possible values of x<sub>b</sub> &isin; [0 .. m-1].
-2. compute values of _&beta; &prop;<sup>-m x<sub>g<sub></sup>_ &isin; [0 .. m], for each value check if it exists in the generated values in previous step, and stop once found.
+2. compute values of _&beta; &prop;<sup>-m x<sub>g</sub></sup>_ &isin; [0 .. m], for each value check if it exists in the generated values in previous step, and stop once found.
    
 - Complexity = &Oopf;(&radic;*\|G\|*)
 - to safeguard against this attack *\|G\|* should be >= 2<sup>160</sup>.
@@ -47,7 +47,7 @@ _&prop;<sup>x<sub>b<sub></sup> &equiv; &beta; &prop;<sup>-m x<sub>g<sub></sup>_
 #### 3 - Pollard Rho Method
 - Based on Brithday Paradox
 - Randomly generate numbers of the form _&prop;<sup>i</sup>&beta;<sup>j</sup>_
-  given that _&beta; = &prop; <sup>x<sup>_, then the previous form can be written as _&prop;<sup>i</sup>&beta;<sup>xj</sup>_
+  given that _&beta; = &prop; <sup>x</sup>_, then the previous form can be written as _&prop;<sup>i</sup>&beta;<sup>xj</sup>_
 - Wait until a collision is found, then  
   _&prop;<sup>i<sub>1</sub> + x j<sub>1</sub></sup> = &prop; <sup>i<sub>2</sub> + x j<sub>2</sub></sup> &#8195;&#8195; mod \|G\|_  
   _i<sub>1</sub> + x j<sub>1</sub> = i<sub>2</sub> + x j<sub>2</sub> &#8195;&#8195; mod &phi;(\|G\|)_  
