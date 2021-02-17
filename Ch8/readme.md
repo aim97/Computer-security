@@ -28,12 +28,12 @@ _<p align='center'>x = &prop;<sup>-1</sup> &beta; mod m</p>_
 Attack the generalized DLP not specific to certain groups
 #### 1 - Brute Force
 - Apply the operation to *&prop;* repeatedly until *&beta;* is reached, the number of iterations needed is x.
-- Its complexity is &Oopf;(*ord(&prop;)*), using a primitive element this is essentially &Oopf;(*|G|*).
-- So this attack fails if *|G|* is >= 2<sup>80</sup>.
+- Its complexity is &Oopf;(*ord(&prop;)*), using a primitive element this is essentially &Oopf;(*\|G\|*).
+- So this attack fails if *\|G\|* is >= 2<sup>80</sup>.
 
 #### 2 - Shank's method (Baby step Giant Step)
 - A divide and Conquer approach
-Let m = &radic;(*|G|*).  
+Let m = &radic;(*\|G\|*).  
 we can define x as x = x<sub>g</sub> m + x<sub>b</sub>  
 now the DLP can be written as  
 _&prop;<sup>x<sub>b<sub></sup> &equiv; &beta; &prop;<sup>-m x<sub>g<sub></sup>_  
@@ -41,27 +41,27 @@ _&prop;<sup>x<sub>b<sub></sup> &equiv; &beta; &prop;<sup>-m x<sub>g<sub></sup>_
 1. Generate all possible values of x<sub>b</sub> &isin; [0 .. m-1].
 2. compute values of _&beta; &prop;<sup>-m x<sub>g<sub></sup>_ &isin; [0 .. m], for each value check if it exists in the generated values in previous step, and stop once found.
    
-- Complexity = &Oopf;(&radic;*|G|*)
-- to safeguard against this attack *|G|* should be >= 2<sup>160</sup>.
+- Complexity = &Oopf;(&radic;*\|G\|*)
+- to safeguard against this attack *\|G\|* should be >= 2<sup>160</sup>.
 
 #### 3 - Pollard Rho Method
 - Based on Brithday Paradox
 - Randomly generate numbers of the form _&prop;<sup>i</sup>&beta;<sup>j</sup>_
   given that _&beta; = &prop; <sup>x<sup>_, then the previous form can be written as _&prop;<sup>i</sup>&beta;<sup>xj</sup>_
 - Wait until a collision is found, then  
-  _&prop;<sup>i<sub>1</sub> + x j<sub>1</sub></sup> = &prop; <sup>i<sub>2</sub> + x j<sub>2</sub></sup> &#8195;&#8195; mod |G|_  
-  _i<sub>1</sub> + x j<sub>1</sub> = i<sub>2</sub> + x j<sub>2</sub> &#8195;&#8195; mod &phi;(|G|)_  
-  _x = (i<sub>2</sub> - i<sub>1</sub> ). (j<sub>1</sub> - j<sub>2</sub>)<sup>-1</sup> &#8195;&#8195; mod &phi;(|G|)_  
+  _&prop;<sup>i<sub>1</sub> + x j<sub>1</sub></sup> = &prop; <sup>i<sub>2</sub> + x j<sub>2</sub></sup> &#8195;&#8195; mod \|G\|_  
+  _i<sub>1</sub> + x j<sub>1</sub> = i<sub>2</sub> + x j<sub>2</sub> &#8195;&#8195; mod &phi;(\|G\|)_  
+  _x = (i<sub>2</sub> - i<sub>1</sub> ). (j<sub>1</sub> - j<sub>2</sub>)<sup>-1</sup> &#8195;&#8195; mod &phi;(\|G\|)_  
 
 - It's the best known attack for elliptic curve cryptosystems.  
-- Complexity = &Oopf;(&radic;*|G|*).
-- to safeguard against this attack *|G|* should be >= 2<sup>160</sup>.
+- Complexity = &Oopf;(&radic;*\|G\|*).
+- to safeguard against this attack *\|G\|* should be >= 2<sup>160</sup>.
 
 #### 4 - Polhig Hellman method
 - Based on chinease remainder method.
 - Used as a preprocessing step for other methods to make them faster.
-- It's a divide and Conquer algorithm, it defines |G| as  
-  _|G| = p<sub>1</sub><sup>e<sub>1</sub></sup> p<sub>2</sub><sup>e<sub>2</sub></sup> p<sub>3</sub><sup>e<sub>3</sub></sup> p<sub>4</sub><sup>e<sub>4</sub></sup> ... p<sub>n</sub><sup>e<sub>n</sub></sup>_
+- It's a divide and Conquer algorithm, it defines \|G\| as  
+  _\|G\| = p<sub>1</sub><sup>e<sub>1</sub></sup> p<sub>2</sub><sup>e<sub>2</sub></sup> p<sub>3</sub><sup>e<sub>3</sub></sup> p<sub>4</sub><sup>e<sub>4</sub></sup> ... p<sub>n</sub><sup>e<sub>n</sub></sup>_
 
 - Use any of the above methods to solve DLP in smaller sub groups G(p<sub>i</sub><sup>e<sub>i</sub></sup>).
 - Then combine the results to compute _x_ using chinease remainder method.
@@ -73,7 +73,7 @@ Attacks that are specific to certain groups or under certain conditions
 - It targets groups _Z*<sub>p</sub>_ and _GF(2<sup>m</sup>)_.
 - It works in groups where large elements can be represented as a product of small elements.
 - This is a very strong attack, but doesn't work on elliptic curve cryptosystems.
-- to safeguard against this attack *|G|* should be >= 2<sup>1024</sup>.
+- to safeguard against this attack *\|G\|* should be >= 2<sup>1024</sup>.
 
 ### Security of DHKE
 ![GDH](../images/ch8-DHP.png)
