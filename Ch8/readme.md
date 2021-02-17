@@ -82,11 +82,11 @@ Attacks that are specific to certain groups or under certain conditions
 - IT'S NOT SECURE AGAINST _ACTIVE ATTACKS_ like: _replay_, _generating false messages_, and _message modification_.
 
 ## Elgammal Encryption scheme
-![Elgammal Encryption Scheme](../images/Ch8-Elgammal.png)
+![Elgammal Encryption Scheme](../images/Ch8-Elgammal.png)  
 The above is a simple representation of the algorithm, that uses DHKE to exchange the key, then encrypt the message with simple multiplication then.
 
-The actual scheme is as follows:
-![Elgammal Protocol](../images/Ch8-Elgammal-protocol.png)
+The actual scheme is as follows:  
+![Elgammal Protocol](../images/Ch8-Elgammal-protocol.png)  
 - Since K <sub>m</sub> is multiplied with x, it's called a _Masking key_.
 - it's a probablisitic scheme, running the algorithm multiple times should have different result, depending on the chosen value for i, the private key of alice, which is changed every time a message is sent.  
 - The protocol is used to transfer messages in one direction, you need to have a different process for the other direction to send messages as well.
