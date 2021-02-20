@@ -46,7 +46,7 @@ However this approach has few problems:
 here the session key is used to share messages between A and B directly not passing by the DC, but stillsince the DC generates the session key it stillcan decrypt the message, however the message shouldn't find its way to the DC.
 
 ### End-to-End encryption++
-![end to end encryption++](../images/Ch13-DC-EtoE++.png)
+![end to end encryption++](../images/Ch13-DC-EtoE++.png)  
 Same as the above except, it passes the encrypted session key of B to A, and now sharing the session key is the responsibility of A, he would send it along with the encrypted message.  
 On the receiving end, B would decrypt the session key, and then use it to decrypt the message.
 
