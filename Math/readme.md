@@ -20,6 +20,18 @@ it's used to compute the number of coprimes of a given number m in the set of in
 it's defined as follows:  
 ![Euler phi](../images/Ch6-euler-phi.png)
 
+## Fermat's little theorem and Euler function
+![fermat](../images/Ch6-fermat.png)  
+Fermat little theorem only works in groups of primes, namely *Z<sub>p</sub>*.  
+
+Euler theorem is a generalization over Fermat little theorem, that works for all rings *Z<sub>m</sub>*.  
+With one condition m and a must be coprimes.  
+![euler](../images/Ch6-euler.png)
+
+It's also worth noting that this method can be used to compute the inverse of a number.  
+*a<sup>-1</sup> ≡ a<sup>Φ(m) - 1</sup> &#8195; mod m*  
+for primes the value *Φ(m) - 1 = (p - 1) - 1 = p - 2*
+
 ## Group Theory
 - A group is defined by a set of _elements_ and and operation _&omicron;_ that satisfy the following rules:
 - **The group is closed**: for any two elements _x_ and _y_, _c = x &omicron; y &isin; G_

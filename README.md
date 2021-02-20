@@ -12,8 +12,8 @@ Covering topics from understanding cryptography book
 - [ ] Math
   - [ ] [Summary](Math/readme.md)
     - [X] Euler phi Function
-    - [ ] Fermat's little theorem
-    - [ ] Euler theorem 
+    - [X] Fermat's little theorem
+    - [X] Euler theorem 
     - [X] finding inverse with extended euclidean algorithm 
     - [X] Group Theory
     - [X] Elliptic Curve groups
