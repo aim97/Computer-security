@@ -8,7 +8,7 @@ Covering topics from understanding cryptography book
 - [ ] Ch10: Digital Signature
   - [X] [Summary](Ch10/readme.md)
 - [ ] Ch13: Key Establishment
-  - [X] [Summary](Ch10/readme.md)
+  - [X] [Summary](Ch13/readme.md)
 - [ ] Math
   - [ ] [Summary](Math/readme.md)
     - [ ] Euler phi Function
