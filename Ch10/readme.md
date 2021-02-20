@@ -19,7 +19,8 @@ Digital signature is a security service that satisfies Non-repudiation objective
 - Then the Generated block is attached to the message and sent with it.
 - Only the sender can generate the signature, so it must be done using `Private key`.
 - Anyone can verify that the sender is actually the one sending this message, so it must be done using the sender's `public key`.  
-- It's also worth noticing that only `public key cryptography` is used in Digital Signatures, PKC techniques are mostly time consuming, also adding a signature of nearly same message size is inefficient, so we usually sign the message *hash value* not the message itself.
+- It's also worth noticing that only `public key cryptography` is used in Digital Signatures, PKC techniques are mostly time consuming, also adding a signature of nearly same message size is inefficient, so we usually sign the message *hash value* not the message itself.  
+- it's also worth mentioning that we can't use symmetric key cryptography for digital signatures. thetarget of Digital signature is to achieve non-repudiation, to achieve that, the key used for signature must be known only to the sender (this will be the basis for our argument that only the sender could have sent the message), in symmetric cryptography both sender and receiver share the same key (making our argument baseless since the receiver can send the message and generate the signature using the *shared key*).  
 ![Basic idea](../images/Ch10-DS-basics.png)
 
 
