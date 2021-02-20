@@ -11,7 +11,7 @@ Covering topics from understanding cryptography book
   - [X] [Summary](Ch13/readme.md)
 - [ ] Math
   - [ ] [Summary](Math/readme.md)
-    - [ ] Euler phi Function
+    - [X] Euler phi Function
     - [ ] Fermat's little theorem
     - [ ] Euler theorem 
     - [X] finding inverse with extended euclidean algorithm 

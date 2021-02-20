@@ -15,6 +15,11 @@ Let's define m as r<sub>0</sub>, and n as r<sub>1</sub>, and i := 2.
 
 If it didn't reach 1, then n and m aren't co-primes. 
 
+## Euler phi function 
+it's used to compute the number of coprimes of a given number m in the set of integers from 1 to m-1.  
+it's defined as follows:  
+![Euler phi](../images/Ch6-euler-phi.png)
+
 ## Group Theory
 - A group is defined by a set of _elements_ and and operation _&omicron;_ that satisfy the following rules:
 - **The group is closed**: for any two elements _x_ and _y_, _c = x &omicron; y &isin; G_
