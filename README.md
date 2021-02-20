@@ -6,8 +6,12 @@ Covering topics from understanding cryptography book
 - [ ] Ch9: Elliptic Curve Cryptosystems
   - [X] [Summary](Ch9/readme.md)
 - [ ] Ch10: Digital Signature
+  - [X] [Summary](Ch10/readme.md)
 - [ ] Math
   - [ ] [Summary](Math/readme.md)
+    - [ ] Euler phi Function
+    - [ ] Fermat's little theorem
+    - [ ] Euler theorem 
     - [X] finding inverse with extended euclidean algorithm 
     - [X] Group Theory
     - [X] Elliptic Curve groups
