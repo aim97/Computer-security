@@ -102,8 +102,8 @@ All groups used in cryptography (at least here) are `abelian`, `finite`, `cyclic
 - let *&prop;* be a primitive element of elliptic curve group *G*, then *\|G\| * &prop; = &bcy;*, since we denote the operation in this group by `+` sign, we can denote the repeated application of this operation as `*` multiplication (analogous to power operation in multiplicative groups).
 - The operation *k * &prop;* is often computed in cryptography, in order to compute it efficiently we use **double and add algorithm** (same as power and multiply algorithm except changing `*` to `+`).
 
-- An important side note *Hasse’s theorem*:
-  ![elliptic curve limits](../images/Ch9-EllipticCurve-limits.png) 
+- An important side note *Hasse’s theorem*:  
+![elliptic curve limits](../images/Ch9-EllipticCurve-limits.png) 
 ### DLP in Elliptic curves
 ![ECDLP](../images/Ch9-EllipticCurve-DLP.png)  
 Computing the multiplier *d* is the DLP in the domain of Elliptic curves.
