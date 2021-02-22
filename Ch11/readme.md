@@ -2,6 +2,7 @@
 A function that extracts the fingerprint of a given input sequence usually a file.  
 or in other words for a given input sequence x, a hash function should generate an output h , called a digest, that is "unique" to x.
 
+hash function can either be dedicated hash functions or Made out of Block Ciphers.
 ## Requirements of Hash Function
 A hash function must satisfy some properties.
 1. The input can have any length.
@@ -9,5 +10,50 @@ A hash function must satisfy some properties.
 3. **efficient**: *h(x)* is easy to compute.
 4. **Preimage search**: it's practically infeasible to find a value x that has a given hash value h.
 5. **Second preimage search**: it's practically infeasible to find a message x<sub>2</sub> that has the same hash as a message x<sub>1</sub>.
+6. **Collision Resistance**: it's practically infeasible to find two sequences x<sub>1</sub> and x<sub>2</sub> such that *h(x<sub>1</sub>) = h(x<sub>2</sub>)*.
+
 ## Birth day paradox
 ## SHA-3
+The new standard for hashing chosen by 2012 as a counter measure for the possible failure of SHA-2.  
+As any hash function it has arbitrary input length, but the output can be 224, 256, 384 and 512 bits, that can be used depending on the application.  
+Based on birth day paradox, the strength of a hash function is measured as *2<sup>n/2</sup>*, so those each of those bit lengths correspond to a different level of security.  
+- 224 bits: 2<sup>112</sup> same level of security as 3DES.
+- 256 bits: 2<sup>128</sup> same level of security as AES with 128 bit key.
+- 384 bits: 2<sup>192</sup> same level of security as AES with 192 bit key.
+- 512 bits: 2<sup>256</sup> same level of security as AES with 256 bit key.
+
+This algorithm was mainly chosen because it was different from idea of SHA-1 and SHA-2, it uses the sponge construction.
+
+### SHA-3 parameters 
+1. Bus length b, for the original algorithm called keccak, it can have multiple values, for SHA-3 we only take the largest which is 1600.
+2. Number of rounds for the `F function`, similarly to Bus length, SHA-3 only accepts largest value 24 rounds.
+
+There are two more parameters r the block size, and C the capcity that differ based on the output size wanted.
+|Output|   r  |   C  |
+|------|------|------|
+|  224 | 1152 |  448 |
+|  256 | 1088 |  512 |
+|  384 |  832 |  768 |
+|  512 |  576 | 1024 |
+
+note that r + c = b = 1600
+### SHA-3 in action 
+it has two main phases 
+0. Preprocessing: not counted and is mainly just padding, added to make the input a mutliple of block size, and apparently, it's not done trivially.
+1. Absorbing (Preprocessing) phase 
+2. Squeezing phase
+
+#### Absorbing phase
+![block](../images/Ch11-SHA3-block.png)  
+This operation is done for all input blocks X<sub>i</sub> iteratively until we reach the final result.   
+We start from some chosen IV at the left, then apply the operation (adding X<sub>i</sub> with xor then applying the F function), then the output is passed to the next stage, the output after processing the last input block is the output of the Absorbing phase.
+
+##### The F function 
+This function has 24 rounds (as mentioned above), each round has 5 steps, each step looks complicated so i'll ignore them. &#128578;
+
+#### Squeezing phase 
+This might seem a bit out of the blue, but we are done here.  
+The output of the Absorbing phase, take the number of bits you need from it, that's all for SHA-3.  
+
+For the actual algorithm which is more like a CPRNG, we apply the F function iteratively, reading the first r bits in each iteration.  
+
