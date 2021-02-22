@@ -10,9 +10,9 @@ Covering topics from understanding cryptography book
 - [ ] Ch10: Digital Signature
   - [X] [Summary](Ch10/readme.md)
 - [ ] Ch11: Hash functions
-  - [ ] [Summary](Ch11/readme.md)
+  - [X] [Summary](Ch11/readme.md)
 - [ ] Ch12: Message Authentication Codes
-  - [ ] [Summary](Ch12/readme.md)
+  - [X] [Summary](Ch12/readme.md)
 - [ ] Ch13: Key Establishment
   - [X] [Summary](Ch13/readme.md)
 - [ ] Math
