@@ -12,7 +12,19 @@ A hash function must satisfy some properties.
 5. **Second preimage search**: it's practically infeasible to find a message x<sub>2</sub> that has the same hash as a message x<sub>1</sub>.
 6. **Collision Resistance**: it's practically infeasible to find two sequences x<sub>1</sub> and x<sub>2</sub> such that *h(x<sub>1</sub>) = h(x<sub>2</sub>)*.
 
-## Birth day paradox
+## Birthday paradox
+A collision is more inevitable as thanos, If you have a group of people that is larger than 365, there is for sure at least 2 with the same birthday.  
+
+Same for hashing, with arbitrary input length, the number of possible inputs is huge, but the number of possible outputs is limited by the output size length, 2<sup>n</sup> (where n is the output fixed size), so a collision will surely occur, we can only make sure that those collisions are harder to find.  
+
+the probability of finding collisions when input size is m and output size is N should be:  
+<img src="https://render.githubusercontent.com/render/math?math=\color{green}\Large p = \prod_{i = 1}^{t} (1 - \frac{1}{N})">  
+for hashing N = 2<sup>n</sup>:  
+<img src="https://render.githubusercontent.com/render/math?math=\color{green}\Large p = \prod_{i = 1}^{t} (1 - \frac{1}{2^n})">  
+The strength of the hash can be computed as the average number of steps needed to find a collision:  
+<img src="https://render.githubusercontent.com/render/math?math=\color{green}\Large t = 2^\frac{n+1}{2} \sqrt{ln(\frac{1}{1 - \lambda})} \approx 2^\frac{n}{2}">  
+Where λ is the possibility of finding a collision
+
 ## SHA-3
 The new standard for hashing chosen by 2012 as a counter measure for the possible failure of SHA-2.  
 As any hash function it has arbitrary input length, but the output can be 224, 256, 384 and 512 bits, that can be used depending on the application.  
