@@ -66,7 +66,7 @@ This solution works, since the attacker has no control of the message generated,
 
 ### El-gammal Digital Signature 
 #### Key Generation
-![elgammal key generation](../images/Ch8-Elgammal-protocol.png)  
+![elgammal key generation](../images/Ch10-DS-elgammal-KG.png)  
 **The public key:** (p, &prop;, &beta;)  
 **The private key:** d
 
