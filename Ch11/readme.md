@@ -8,8 +8,8 @@ A hash function must satisfy some properties.
 1. The input can have any length.
 2. the output is fixed length.
 3. **efficient**: *h(x)* is easy to compute.
-4. **Preimage search**: it's practically infeasible to find a value x that has a given hash value h.
-5. **Second preimage search**: it's practically infeasible to find a message x<sub>2</sub> that has the same hash as a message x<sub>1</sub>.
+4. **Preimage resistance**: it's practically infeasible to find a value x that has a given hash value h.
+5. **Second preimage resistance**: it's practically infeasible to find a message x<sub>2</sub> that has the same hash as a message x<sub>1</sub>.
 6. **Collision Resistance**: it's practically infeasible to find two sequences x<sub>1</sub> and x<sub>2</sub> such that *h(x<sub>1</sub>) = h(x<sub>2</sub>)*.
 
 ## Birthday paradox
