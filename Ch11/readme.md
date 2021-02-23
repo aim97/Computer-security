@@ -50,8 +50,8 @@ There are two more parameters r the block size, and C the capcity that differ ba
 
 note that r + c = b = 1600
 ### SHA-3 in action 
-it has two main phases 
-0. Preprocessing: not counted and is mainly just padding, added to make the input a mutliple of block size, and apparently, it's not done trivially.
+it has two main phases  
+* Preprocessing: not counted and is mainly just padding, added to make the input a mutliple of block size, and apparently, it's not done trivially.
 1. Absorbing (Preprocessing) phase 
 2. Squeezing phase
 
