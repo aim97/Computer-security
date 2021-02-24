@@ -5,8 +5,13 @@ This file includes a summary for the rules needed through out the book, without 
 Problem statement: find the inverse of a given number *n*, in modulus *m*, given that n and m are coprimes. 
 
 Input: the number to find the inverse of n, and the mod m.  
-Solution steps:
-Let's define m as r<sub>0</sub>, and n as r<sub>1</sub>, and i := 2.
+### Solution steps:  
+#### Initialization
+r<sub>0</sub> = m, r<sub>1</sub> = n.  
+t<sub>0</sub> = 0, t<sub>1</sub> = 1.  
+i = 2.  
+
+#### Process
 1. Compute q<sub>i</sub> = floor(r<sub>i-2</sub>,r<sub>i-1</sub>).
 2. Compute t<sub>i</sub> = t<sub>i-2</sub> - q<sub>i</sub> t<sub>i-1</sub>.
 3. Compute r<sub>i</sub> = r<sub>i-2</sub> - q<sub>i</sub> r<sub>i-1</sub>.
